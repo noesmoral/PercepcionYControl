@@ -1,0 +1,6 @@
+all:
+	gcc -o ejemplo1 `pkg-config --cflags playerc` ejemplo1.c `pkg-config --libs playerc`;
+	player ejemplo1.cfg
+
+clean:
+	rm -rf *.o ejemplo1;

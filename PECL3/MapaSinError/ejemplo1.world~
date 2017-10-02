@@ -1,0 +1,54 @@
+# simple.world - basic world file example
+# Authors: Richard Vaughan
+# $Id$
+
+include "pioneer.inc"
+include "map.inc"
+include "sick.inc"
+
+# time to pause (in GUI mode) or quit (in headless mode (-g)) the simulation
+quit_time 3600 # 1 hour of simulated time
+
+paused 1
+
+resolution 0.02	#hay que cambiarlo pero no se ajustarlo
+
+# configure the GUI window
+window
+(
+  size [ 364.000 364.000 ] # in pixels
+  scale 72.8   # pixels per meter
+  center [ -0.019  -0.282 ]
+  rotate [ 0  0 ]
+  			
+  show_data 1              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "cave"
+  size [5.000 5.000 0.800]
+  pose [0 0 0 0]
+  bitmap "ejemplo1.png"
+)
+
+amigobot
+(		  
+  # can refer to the robot by this name
+  name "r2d2"
+  pose [ 2 -2 0 90 ]  #ejex	ejey	?	rotacion
+
+  sicklaser(   
+     # ctrl "lasernoise"  # uncomment this line to run a laser noise generator
+  )
+ 
+  #ctrl "wander"
+
+  # report error-free position in world coordinates
+  #localization "odom"
+  localization "gps"
+  #odom_error [0.4 0.4 0.0 0.0] 
+  localization_origin [ 2 -2 0 0 ]
+)
+

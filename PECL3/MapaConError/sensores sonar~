@@ -1,0 +1,10 @@
+Sensor		eje x		eje y		angulo
+En el sensor 0: px es 0.073000,	py es 0.105000,	angulo es 1.570796
+En el sensor 1: px es 0.130000,	py es 0.078000, angulo es 0.715585
+En el sensor 2: px es 0.154000,	py es 0.030000, angulo es 0.261799
+En el sensor 3: px es 0.154000,	py es -0.030000,angulo es -0.261799
+En el sensor 4: px es 0.130000,	py es -0.078000,angulo es -0.715585
+En el sensor 5: px es 0.073000,	py es -0.105000,angulo es -1.570796
+En el sensor 6: px es -0.146000,py es -0.060000,angulo es -2.530727
+En el sensor 7: px es -0.146000,py es 0.060000, angulo es 2.530727
+
